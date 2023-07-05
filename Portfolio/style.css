@@ -1,0 +1,311 @@
+/*
+#E91E63
+#00BCD4
+#05796E
+#FFA000
+
+PALETA DE COLORES 1
+red: #FF302D;
+red2: #E41117;
+black: #000;
+white: #fff;
+
+PALETA DE COLORES 2
+
+sky: #7cdbd5
+yellow: #EAEE00
+aquamarine: #02c8a7
+bright coral: #f53240
+*/
+
+
+html,
+body {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #000;
+}
+
+
+/* General */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Abel', sans-serif;
+    color: #FFA000;
+}
+p,
+a {
+    font-family: 'Muli', serif;
+}
+
+
+/*TOP NAVBAR*/
+/* Remove margins and padding from the list, and add a black background color */
+ul.topnav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: transparent;
+}
+/* Float the list items side by side */
+ul.topnav li {
+    float: right;
+}
+/* Style the links inside the list items */
+ul.topnav li a {
+    display: inline-block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    transition: 0.3s;
+    font-size: 17px;
+    font-weight: bold;
+}
+/* Change background color of links on hover */
+ul.topnav li a:hover {
+    background-color: rgba(0,0,0,0.5);
+    color: #ffa000;
+    font-weight: bold;
+}
+/* Hide the list item that contains the link that should open and close the topnav on small screens */
+ul.topnav li.icon {
+    display: none;
+}
+
+
+/* Cover */
+.jumbotron {
+    background: url(https://source.unsplash.com/3NeiQ8HI6Uo/1600x900) no-repeat center center;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+}
+.main {
+    text-align: center;
+}
+.main h1 {
+    font-weight: bolder;
+    color: #ffa000;
+    margin-top: 120px;
+}
+.main p {
+    color: #FFF;
+}
+.main span {
+    padding-left: 5px;
+    padding-right: 5px;
+    background-color: rgba(0, 0, 0, 0.6);
+    /* background-color: rgba(234, 238, 0, 0.5); */
+}
+
+
+/* About me */
+#about-me {
+    background-color: #05796E;
+    color: #fff;
+    padding: 80px 100px 80px 100px;
+}
+#about-me h1 {
+    text-align: center;
+    font-weight: bold;
+}
+#about-me p {
+    font-size: 20px;
+}
+#about-me a {
+    color: white;
+    font-weight: bold;
+}
+
+/* Projects */
+.row {
+    max-width: 100%;
+}
+#frontend-projects h2,
+#datavis-projects h2,
+#backend-projects h2 {
+    font-size: 50px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+#frontend-projects h3,
+#datavis-projects h3,
+#backend-projects h3 {
+    font-size: 250%;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+#frontend-projects p,
+#datavis-projects p,
+#backend-projects p {
+    font-size: 150%;
+}
+#frontend-projects {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-color: #fff;
+    color: #E91E63;
+    text-align: center;
+}
+#frontend-projects img {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+#frontend-projects h2 {
+    font-size: 50px;
+    color: #E91E63;
+}
+#frontend-projects .beginner-projects p {
+    padding-left: 200px;
+    padding-right: 200px;
+}
+#frontend-projects .intermediate-projects p {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+
+/* Footer */
+footer {
+    background-color: #05796E;
+    height: 200px;
+    color: #fff;
+    font-weight: bolder;
+}
+footer ul {
+    list-style: none;
+    padding: 0;
+    float: left;
+    padding-left: 50px;
+}
+footer ul li {
+    display: inline;
+    margin-right: 35px;
+}
+footer ul li a {
+    color: #fff;
+    font-size: 25px;
+}
+footer ul li a:hover {
+    color: #e91e63;
+    font-size: 25px;
+}
+footer p {
+    float: right;
+    padding-right: 50px;
+}
+footer p,
+footer ul {
+    line-height: 200px;
+    margin-bottom: 0;
+}
+
+
+
+
+/*****************************/
+/* MEDIA QUERIES - RESPONSIVE*/
+/*****************************/
+@media screen and (max-width:769px) {
+    
+    /* ABOUT ME */
+    #about-me {
+        padding: 40px 50px 40px 50px;
+    }
+    #about-me p {
+        font-size: 15px;
+    }
+
+
+    /* FRONTEND PROJECTS */
+    #frontend-projects p,
+    #datavis-projects p,
+    #backend-projects p {
+        font-size: 17px;
+    }
+    #frontend-projects .beginner-projects p {
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+    #frontend-projects .beginner-projects img {
+        max-width: 387px;
+    }
+}
+
+/* When the screen is less than 680 pixels wide, hide all list items, except for the first one ("Home"). Show the list item that contains the link to open and close the topnav (li.icon) */
+@media screen and (max-width:680px) {
+  ul.topnav li:not(:first-child) {display: none;}
+  ul.topnav li.icon {
+    float: right;
+    display: inline-block;
+  }
+}
+
+/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens */
+@media screen and (max-width:680px) {
+  ul.topnav.responsive {position: relative;}
+  ul.topnav.responsive li.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  ul.topnav.responsive li {
+    float: none;
+    display: inline;
+  }
+  ul.topnav.responsive li a {
+    display: block;
+    text-align: left;
+  }
+}
+
+
+@media screen and (max-width:361px) {
+
+    /* ABOUT ME */
+    #about-me {
+        text-align: center;
+        padding: 30px 25px 30px 25px;
+    }
+    #about-me p {
+        font-size: 17px;
+    }
+
+
+    /* PROJECTS */
+    #frontend-projects h2,
+    #datavis-projects h2,
+    #backend-projects h2 {
+        font-size: 35px;
+        text-transform: uppercase;
+        font-weight: bold;
+    }
+    #frontend-projects h3,
+    #datavis-projects h3,
+    #backend-projects h3 {
+        font-size: 23px;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+    #frontend-projects img,
+    #datavis-projects img,
+    #backend-projects img {
+        max-width: 280px;
+    }
+    #frontend-projects .beginner-projects p {
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+    #frontend-projects .beginner-projects img {
+        max-width: 280px;
+    }
+}
